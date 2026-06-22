@@ -3,8 +3,7 @@
 body {
   background:
     radial-gradient(
-      circle at 10% 20%,
-      rgba(255, 255, 255, 0.55) 0 7px,
+      /* circle at 10% 20%, */ rgba(255, 255, 255, 0.55) 0 7px,
       transparent 8px
     ),
     linear-gradient(135deg, #ffd4ea 0%, #bff4ee 35%, #d9c1ff 70%, #ffe49c 100%);
@@ -23,7 +22,7 @@ body {
 }
 
 #header p {
-  color: #5f4b66;
+  color: #8b62a2;
   font-weight: 700;
   text-shadow: 1px 1px 0 #ffffff;
 }
@@ -67,11 +66,29 @@ h2,
 h3 {
   color: #7d45c7;
   font-weight: 800;
+  /* line-height: 1em; */
+}
+
+#about .about-heading {
+  /* letter-spacing: -0.03em; */
+  line-height: 1.1em;
 }
 
 header.major h2:after {
   background-color: #ff6fb5;
   background-image: none;
+  margin: 0.5em;
+}
+
+header.major .about-heading {
+  background-image: none;
+  margin: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.spotlight .content header.major {
+  margin: 0;
 }
 
 .button,
@@ -82,7 +99,7 @@ button.button {
 
 .button.primary,
 button.button.primary {
-  background: #ff72b8;
+  background: #e375ac;
   box-shadow: none;
   color: #ffffff !important;
 }
@@ -109,7 +126,7 @@ button.button:not(.primary) {
 #footer,
 #footer h2,
 #footer p {
-  color: #5f4b66;
+  color: #8b62a2;
   text-shadow: none;
 }
 
@@ -194,34 +211,26 @@ button.button:not(.primary) {
   height: auto;
 }
 
-.spotlight .image {
-  background: #ffffff;
-  border-radius: 0.35em;
-  /* box-shadow: 0 .75em 0 rgba(125, 69, 199, 0.16); */
-  box-shadow: 0 0.75em 0.75em rgba(27, 10, 49, 0.18);
-  padding: 0.95em 0.95em 4.95em;
+.spotlight .image.about-image {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
   transform: rotate(-2deg);
   width: 22em;
-  max-width: 90%;
+  max-width: 50%;
 }
 
-.spotlight .photo-crop {
-  border-radius: 0.2em;
-  display: block;
-  overflow: hidden;
-}
-
-.spotlight .photo-crop img {
-  border-radius: 0.2em;
+.spotlight .image.about-image img {
   display: block;
   width: 100%;
   height: auto;
-  transform: scale(1.1) translateX(-1.1%);
-  transform-origin: center center;
+  border-radius: 0;
 }
 
 #join .actions .button {
-  background: #ff72b8;
+  background: #efafcf;
   color: #ffffff !important;
   box-shadow: none;
   font-family: Arial, sans-serif;
@@ -235,6 +244,9 @@ button.button:not(.primary) {
 }
 
 @media screen and (max-width: 736px) {
+  .spotlight .image.about-image {
+    margin-bottom: 0.95em;
+  }
   .features li .icon.major {
     margin-bottom: 1em;
     padding: 0.35em;
@@ -246,4 +258,8 @@ button.button:not(.primary) {
     line-height: 2em;
     width: 2em;
   }
+}
+
+.spotlight .image.about-image {
+  margin-bottom: 0.95em;
 }

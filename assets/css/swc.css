@@ -290,7 +290,7 @@ button.button:not(.primary) {
 }
 
 .statistics li .stat-note {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 /* .style3 .address {
@@ -307,7 +307,7 @@ button.button:not(.primary) {
 }
 
 .address-line-2 {
-  font-size: 0.85em;
+  font-size: 0.75em;
   font-weight: 400;
 }
 

@@ -42,7 +42,7 @@ body {
 }
 
 #nav {
-  background: #ff8fc7;
+  background: #e971aa;
   border-bottom: 4px solid #ffffff;
 }
 
@@ -316,7 +316,7 @@ button.button:not(.primary) {
   font-size: 1.2em;
   font-weight: 500;
   color: #5f5a66;
-  margin-top: 0!important;
+  margin-top: 0 !important;
   margin-bottom: 0;
   line-height: 1.3em;
 }

@@ -250,8 +250,6 @@ button.button:not(.primary) {
     max-width: 70%;
   }
 
-
-
   .features li .icon.major {
     margin-bottom: 1em;
     padding: 0.35em;
@@ -339,4 +337,13 @@ button.button:not(.primary) {
   justify-content: center;
   gap: 0.75em;
   padding-left: 0;
+}
+
+.location-card-link {
+  border-bottom: none;
+  /* font-weight: 900; */
+}
+
+.style3 {
+  box-shadow: 0px 0px 7px 2px #7a738e inset;
 }

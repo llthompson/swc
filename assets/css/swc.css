@@ -227,6 +227,7 @@ button.button:not(.primary) {
   width: 100%;
   height: auto;
   border-radius: 0;
+  box-shadow: 7px 6px 17px 0px rgba(0, 0, 0, 0.44);
 }
 
 #join .actions .button {
@@ -246,7 +247,11 @@ button.button:not(.primary) {
 @media screen and (max-width: 736px) {
   .spotlight .image.about-image {
     margin-bottom: 0.95em;
+    max-width: 70%;
   }
+
+
+
   .features li .icon.major {
     margin-bottom: 1em;
     padding: 0.35em;

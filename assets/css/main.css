@@ -277,9 +277,9 @@ a {
   color: inherit;
 }
 
-a:hover {
+/* a:hover {
   border-bottom-color: transparent;
-}
+} */
 
 strong,
 b {
@@ -3530,7 +3530,7 @@ body.is-preload #header.alt .logo {
 #main .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #dddddd;
-  color: #636363 !important;
+  color: #636363 ;
 }
 
 #main input[type="submit"]:hover,

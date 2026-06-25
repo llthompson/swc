@@ -216,18 +216,102 @@
             <h2>FAQ</h2>
           </header>
 
-          <div class="content">
-            <h3>[Question 1]</h3>
-            <p>[Answer]</p>
+          <div class="faq-controls">
+            <button
+              class="faq-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-label="Expand all FAQs"
+            >
+              +
+            </button>
+          </div>
 
-            <h3>[Question 2]</h3>
-            <p>[Answer]</p>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Do I need to RSVP?</summary>
+              <p>Nope! Just show up :) We’ll be there!</p>
+            </details>
 
-            <h3>[Question 3]</h3>
-            <p>[Answer]</p>
+            <details class="faq-item">
+              <summary>Is it okay if I come alone?</summary>
+              <p>You’re not alone, you’ll have us ;) but yes, totally fine!</p>
+            </details>
 
-            <h3>[Question 4]</h3>
-            <p>[Answer]</p>
+            <details class="faq-item">
+              <summary>
+                What if I’m [shy/awkward/quiet/neurodivergent/etc]?
+              </summary>
+              <p>Welcome to the club lol.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do I have to introduce myself?</summary>
+              <p>Yes please! But you can come prepared! We always ask:</p>
+              <ul>
+                <li>your name</li>
+                <li>your preferred pronouns</li>
+                <li>
+                  what writing project you’re working on OR what kinds of things
+                  you like to write
+                </li>
+              </ul>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                I’m not currently working on a writing project! Can I still
+                come?
+              </summary>
+              <p>
+                YES! You have the soul of a writer, whether or not you’re
+                writing. Most of us cycle through phases of writing/not writing.
+                It's totally normal!
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                I write [insert genre here]. Is this group for me?
+              </summary>
+              <p>
+                Yes, we welcome all genres of writing: poetry, short stories,
+                fantasy, romance, sci-fi, essays, journal/diary, memoirs,
+                non-fiction, screenplays, blogs, really long text messages to
+                your besties, love letters you’ll never send. Did I already
+                mention about having the soul of a writer?
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do I have to share my work?</summary>
+              <p>
+                Meetings are more about community building than reading each
+                other's work. When work is shared (via Discord, peer workshops,
+                or in the zine) it is always optional.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How many people usually attend?</summary>
+              <p>Usually between 6-10 sapphic writers.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                What if I have more questions that aren’t listed in your
+                incredibly thorough FAQ?
+              </summary>
+              <p>DM me on IG :)</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>I’m nervous.</summary>
+              <p>
+                The best way to make friends is usually the scariest. It means
+                you’re doing something right!
+              </p>
+            </details>
           </div>
         </section>
       </div>
@@ -273,5 +357,24 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/tabs.js"></script>
+    <script>
+      const faqToggle = document.querySelector(".faq-toggle");
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqToggle.addEventListener("click", () => {
+        const shouldOpen = faqToggle.getAttribute("aria-expanded") === "false";
+
+        faqItems.forEach((item) => {
+          item.open = shouldOpen;
+        });
+
+        faqToggle.setAttribute("aria-expanded", shouldOpen);
+        faqToggle.setAttribute(
+          "aria-label",
+          shouldOpen ? "Collapse all FAQs" : "Expand all FAQs",
+        );
+        faqToggle.textContent = shouldOpen ? "–" : "+";
+      });
+    </script>
   </body>
 </html>

@@ -203,7 +203,6 @@
         <section id="join" class="main special tab-panel">
           <header class="major">
             <h2>Socials</h2>
-            <!-- <p>[Explain Discord / Instagram / how someone gets connected]</p> -->
           </header>
 
           <footer class="major">
@@ -515,15 +514,51 @@
               </li>
          <div class="social-widget-intro">
               <p>
-                  Join our Discord to receive member #announcements, participate in a peer #workshop, collaborate on #zine-planning, attend virtual #wednesday-write-nights, and #chatty-chat in between meetings.
+                  Join our Discord to receive member #announcements, participate in a #peer-workshop, collaborate on #zine-planning, attend virtual #wednesday-write-nights, and #chatty-chat in between meetings.
                 </p>
             </div>
             <ul class="social-widgets">
-              <li>
-                <a href="https://discord.gg/nKW9PHcg6" class="button primary"
-                  >Join the Discord</a
-                >
-              </li>
+
+
+<li>
+  <div id="discord-widget-card">
+    <div id="discord-widget-content">Loading Discord server...</div>
+  </div>
+</li>
+
+<script>
+  const discordChannels = [
+    "announcements",
+    "introductions-and-bios",
+    "peer-workshop",
+    "zine-planning",
+    "wednesday-write-nights",
+    "chatty-chat",
+  ];
+
+  fetch('https://discord.com/api/guilds/1398002571528114196/widget.json')
+    .then(res => res.json())
+    .then(data => {
+      const channelsHtml = discordChannels
+        .map(name => `<li class="discord-widget-channel"><span class="discord-widget-channel-icon">#</span>${name}</li>`)
+        .join('');
+
+      document.getElementById('discord-widget-content').innerHTML = `
+        <div class="discord-widget-header">
+          <span class="discord-widget-logo">SWC Discord</span>
+        </div>
+        <ul class="discord-widget-channels">${channelsHtml}</ul>
+        <div class="discord-widget-footer">
+          <span class="discord-widget-tagline">A space for sapphic writers in ATX</span>
+          <a href="${data.instant_invite}" target="_blank" rel="noopener noreferrer" class="discord-widget-join">Join Discord</a>
+        </div>
+      `;
+    })
+    .catch(() => {
+      document.getElementById('discord-widget-content').innerHTML =
+        '<a href="https://discord.gg/nKW9PHcg6" class="discord-widget-join">Join the Discord</a>';
+    });
+</script>
             </ul>
           </footer>
         </section>

@@ -510,3 +510,67 @@ button.button:not(.primary) {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+#discord-widget-card {
+  width: 100%;
+  max-width: 540px;
+  min-width: 0;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "gg sans", "Source Sans Pro", sans-serif;
+}
+
+.discord-widget-header {
+  background: #5865f2;
+  padding: 20px;
+}
+
+.discord-widget-logo {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.discord-widget-channels {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  background: #1e1f22;
+}
+
+.discord-widget-channel {
+  color: #ffffff !important;
+  font-size: 16px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.discord-widget-channel-icon {
+  margin-right: 8px;
+}
+
+.discord-widget-footer {
+  background: #2b2d31;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.discord-widget-tagline {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.discord-widget-join {
+  background: #313338;
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}

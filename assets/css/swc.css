@@ -511,7 +511,6 @@ button.button:not(.primary) {
   margin-right: auto;
 }
 
-
 #discord-widget-card {
   width: 100%;
   max-width: 540px;
@@ -573,4 +572,12 @@ button.button:not(.primary) {
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
+}
+
+#meetings header.major {
+  margin-bottom: 0 !important;
+}
+
+#meetings header.major p.meeting-note {
+  margin-bottom: 26px !important;
 }

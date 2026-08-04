@@ -2941,7 +2941,7 @@ table.alt tbody tr td {
   padding: 0;
   list-style: none;
 }
-
+/* 
 .features li {
   width: calc(33.33333% - 2em);
   margin-left: 2em;
@@ -2985,6 +2985,163 @@ table.alt tbody tr td {
   .features li:nth-child(3) {
     margin-top: 2em;
   }
+} */
+
+/* Compact Saturday lineup poster */
+
+.saturday-lineup {
+  width: 100%;
+  max-width: 42em;
+  margin: 1.5em auto 0;
+  padding: 1.25em;
+  background:
+    radial-gradient(
+      circle at 12% 10%,
+      rgba(255, 255, 255, 0.7) 0 4px,
+      transparent 5px
+    ),
+    linear-gradient(145deg, #fff1f8 0%, #f5edff 55%, #eefbf9 100%);
+  border: 3px solid #ffffff;
+  border-radius: 1.5em;
+  box-shadow: 0 0.65em 0 rgba(125, 69, 199, 0.14);
+}
+
+.lineup-heading {
+  margin-bottom: 0.85em;
+  text-align: center;
+}
+
+.lineup-kicker {
+  display: block;
+  margin-bottom: 0.15em;
+  color: #a15f8c;
+  font-size: 0.7em;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.lineup-heading h3 {
+  margin: 0 !important;
+  color: #7d45c7;
+  font-size: 1.75em;
+  line-height: 1.05;
+}
+
+.lineup-heading p {
+  margin: 0.2em 0 0;
+  color: #8b62a2 !important;
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.lineup-list {
+  display: grid;
+  gap: 0.55em;
+}
+
+.lineup-row {
+  display: grid;
+  grid-template-columns: 2.8em minmax(0, 1fr);
+  gap: 0.75em;
+  align-items: center;
+  min-width: 0;
+  padding: 0.65em 0.8em;
+  border: 2px solid #ffffff;
+  border-radius: 1em;
+  box-shadow: 0 0.25em 0 rgba(125, 69, 199, 0.08);
+  text-align: left;
+}
+
+.lineup-writing {
+  background: #ffddea;
+}
+
+.lineup-games {
+  background: #e7dcff;
+}
+
+.lineup-workshop {
+  background: #ffe6c9;
+}
+
+.lineup-zine {
+  background: #d7f4ed;
+}
+
+.lineup-crafting {
+  background: #dcecff;
+}
+
+.lineup-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8em;
+  height: 2.8em;
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.72);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #7d45c7;
+  box-shadow: 0 0.18em 0 rgba(125, 69, 199, 0.1);
+}
+
+.lineup-icon::before {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.lineup-copy {
+  display: grid;
+  min-width: 0;
+  line-height: 1.1;
+}
+
+.lineup-week {
+  margin-bottom: 0.08em;
+  color: #9b5b87;
+  font-size: 0.63em;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lineup-copy strong {
+  color: #68408c;
+  font-size: 1.02em;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.lineup-copy > span:last-child {
+  margin-top: 0.12em;
+  color: #5f5a66;
+  font-size: 0.76em;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.lineup-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3em 0.7em;
+  margin-top: 0.85em;
+  color: #7d45c7;
+  font-size: 0.72em;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lineup-footer span:not(:last-child)::after {
+  content: "•";
+  margin-left: 0.7em;
+  color: #e375ac;
 }
 
 /* Statistics */
@@ -3530,7 +3687,7 @@ body.is-preload #header.alt .logo {
 #main .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #dddddd;
-  color: #636363 ;
+  color: #636363;
 }
 
 #main input[type="submit"]:hover,

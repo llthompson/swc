@@ -409,7 +409,9 @@ button.button:not(.primary) {
   }
 
   #expect header.major > p {
-    display: none;
+    font-size: 0.8em;
+    line-height: 1.35;
+    margin-bottom: 0.6em;
   }
 
   .saturday-lineup {

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
   const page = document.body.getAttribute("data-page") || "";
 
   const navItems = [
@@ -83,4 +83,4 @@ document.addEventListener("DOMContentLoaded", function () {
   if (footerMount) {
     footerMount.outerHTML = footerHTML;
   }
-});
+})();

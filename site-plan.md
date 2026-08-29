@@ -47,6 +47,6 @@ Future pages or sections may include:
 - No backend
 - No database
 - No framework
-- Light JavaScript only if it improves the experience
+<!-- - Light JavaScript only if it improves the experience -->
 - Keep copy warm, clear, welcoming, and low-pressure
 - Prioritize mobile-first clarity

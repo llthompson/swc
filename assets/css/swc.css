@@ -46,17 +46,17 @@ body {
   border-bottom: 4px solid #ffffff;
 }
 
-#nav button.tab-link {
+#nav a.tab-link {
   color: #4f315f;
   font-weight: 800;
   letter-spacing: 0.02em;
 }
 
-#nav button.tab-link:hover {
+#nav a.tab-link:hover {
   background: rgba(255, 255, 255, 0.45);
 }
 
-#nav button.tab-link.active {
+#nav a.tab-link.active {
   background: #ffffff;
   color: #7d45c7;
 }
@@ -199,7 +199,7 @@ button.button:not(.primary) {
   transform: rotate(-1deg);
 }
 
-.lineup-heading h3 {
+.lineup-heading h2 {
   margin: 0 !important;
   color: #7d45c7;
   font-size: 1.75em;
@@ -560,7 +560,7 @@ button.button:not(.primary) {
     padding: 0 0.35em;
   }
 
-  #nav button.tab-link {
+  #nav a.tab-link {
     background: transparent;
     border-radius: 0;
     color: #4f315f;
@@ -572,7 +572,7 @@ button.button:not(.primary) {
     white-space: nowrap;
   }
 
-  #nav button.tab-link.active {
+  #nav a.tab-link.active {
     background: transparent;
     color: #ffffff;
     text-decoration: underline;

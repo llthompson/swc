@@ -1,12 +1,28 @@
 /* SWC visual layer: pastel Y2K / scrapbook vibe */
 
+/* Brand colors, sampled from the 2026 logo.
+   Bright tones are for fills and decoration; text uses the ink/plum/deep tones,
+   which pass WCAG AA contrast on the pastel background and on white. */
+:root {
+  --swc-pink: #e27da6;
+  --swc-pink-deep: #c2376c;
+  --swc-pink-deeper: #a82d5e;
+  --swc-blue: #43b9e7;
+  --swc-lavender: #d4a1d1;
+  --swc-orange: #ea9b64;
+  --swc-ink: #2e1f36;
+  --swc-plum: #4a3158;
+  --swc-plum-soft: #5a3d6b;
+  --swc-purple: #7d45c7;
+}
+
 body {
   background:
     radial-gradient(
       /* circle at 10% 20%, */ rgba(255, 255, 255, 0.55) 0 7px,
       transparent 8px
     ),
-    linear-gradient(135deg, #ffd4ea 0%, #bff4ee 35%, #d9c1ff 70%, #ffe49c 100%);
+    linear-gradient(135deg, #ffd3e2 0%, #c4ecfb 35%, #e3cff5 70%, #ffdcc2 100%);
   color: #4f4358;
 }
 
@@ -18,11 +34,24 @@ body {
   color: #7d45c7;
   font-weight: 800;
   text-shadow: 3px 3px 0 #ffffff;
-  display: none;
+}
+
+/* The badge already spells out the name, so hide the h1 visually but keep it
+   for screen readers and search engines. */
+#header h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 #header p {
-  color: #8b62a2;
+  color: var(--swc-plum);
   font-weight: 700;
   text-shadow: 1px 1px 0 #ffffff;
 }
@@ -42,12 +71,12 @@ body {
 }
 
 #nav {
-  background: #e971aa;
+  background: var(--swc-pink);
   border-bottom: 4px solid #ffffff;
 }
 
 #nav a.tab-link {
-  color: #4f315f;
+  color: var(--swc-ink);
   font-weight: 800;
   letter-spacing: 0.02em;
 }
@@ -58,7 +87,7 @@ body {
 
 #nav a.tab-link.active {
   background: #ffffff;
-  color: #7d45c7;
+  color: var(--swc-purple);
 }
 
 h1,
@@ -76,7 +105,7 @@ h3 {
 }
 
 header.major h2:after {
-  background-color: #ff6fb5;
+  background-color: var(--swc-pink);
   background-image: none;
   margin: 0.5em;
 }
@@ -100,15 +129,26 @@ button.button {
 
 .button.primary,
 button.button.primary {
-  background: #e375ac;
+  background: var(--swc-pink-deep);
   box-shadow: none;
   color: #ffffff !important;
+}
+
+/* The template's primary hover/active states are light blue; keep them pink. */
+.button.primary:hover,
+button.button.primary:hover {
+  background: var(--swc-pink-deeper);
+}
+
+.button.primary:active,
+button.button.primary:active {
+  background: #8f2650;
 }
 
 .button,
 button.button:not(.primary) {
   background: #ffffff;
-  color: #4f315f !important;
+  color: var(--swc-ink) !important;
   box-shadow: inset 0 0 0 2px #ffffff;
 }
 
@@ -209,7 +249,7 @@ button.button:not(.primary) {
 
 .lineup-heading p {
   margin: 0.25em 0 0;
-  color: #8b62a2 !important;
+  color: var(--swc-plum-soft) !important;
   font-size: 0.82em;
   font-weight: 800;
   line-height: 1.1;
@@ -502,10 +542,30 @@ button.button:not(.primary) {
   border: 3px solid #ffffff;
 }
 
+/* Meeting info tiles: brand pastels with ink text (the old gray-on-pastel was
+   below 3:1 contrast) */
+.statistics li.style1 {
+  background-color: #f5b3c8;
+}
+
+.statistics li.style2 {
+  background-color: #dcc0ec;
+}
+
+.statistics li.style3 {
+  background-color: #a9dcf2;
+}
+
+#main .statistics li,
+#main .statistics li a,
+#main .statistics li .icon {
+  color: var(--swc-ink);
+}
+
 #footer,
 #footer h2,
 #footer p {
-  color: #8b62a2;
+  color: var(--swc-plum-soft);
   text-shadow: none;
 }
 
@@ -565,7 +625,7 @@ button.button:not(.primary) {
   #nav a.tab-link {
     background: transparent;
     border-radius: 0;
-    color: #4f315f;
+    color: var(--swc-ink);
     font-size: 0.8em;
     font-weight: 800;
     height: auto;
@@ -574,20 +634,79 @@ button.button:not(.primary) {
     white-space: nowrap;
   }
 
+  /* White pill for the current page: white text on pink was too faint */
   #nav a.tab-link.active {
-    background: transparent;
-    color: #ffffff;
-    text-decoration: underline;
-    text-underline-offset: 0.25em;
+    background: #ffffff;
+    border-radius: 999px;
+    color: var(--swc-ink);
+    margin: -0.25em -0.1em;
+    padding: 0.25em 0.5em;
   }
 }
 
 /* Logo + about image sizing */
 
 #header .logo img {
-  width: 180px;
-  max-width: 35vw;
+  width: 320px;
+  max-width: 70vw;
   height: auto;
+}
+
+#header.slim .logo img {
+  width: 180px;
+  max-width: 40vw;
+}
+
+#header .logo {
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 736px) {
+  #header .logo img {
+    width: 220px;
+  }
+
+  #header.slim .logo img {
+    width: 150px;
+  }
+}
+
+/* Flower mark: slides into the desktop nav once it sticks to the top */
+
+#nav .nav-mark {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  display: block;
+  border: 0;
+  line-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.6) rotate(-20deg);
+  transition:
+    opacity 0.2s ease,
+    transform 0.3s ease;
+}
+
+#nav .nav-mark img {
+  width: 2.25em;
+  height: 2.25em;
+}
+
+#nav.alt .nav-mark {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) scale(1) rotate(0);
+}
+
+#nav.alt .nav-mark:hover {
+  transform: translateY(-50%) scale(1.08) rotate(-8deg);
+}
+
+@media screen and (max-width: 980px) {
+  #nav .nav-mark {
+    display: none;
+  }
 }
 
 .spotlight .image.about-image {
@@ -610,7 +729,7 @@ button.button:not(.primary) {
 }
 
 #join .actions .button {
-  background: #efafcf;
+  background: var(--swc-pink-deep);
   color: #ffffff !important;
   box-shadow: none;
   font-family: Arial, sans-serif;
@@ -619,7 +738,7 @@ button.button:not(.primary) {
 
 #join .actions .button.primary {
   background: #ffffff;
-  color: #5b3a6f !important;
+  color: var(--swc-ink) !important;
   box-shadow: inset 0 0 0 1px #b9b9b9;
 }
 
@@ -739,7 +858,7 @@ button.button:not(.primary) {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
-  color: #e375ac !important;
+  color: var(--swc-pink-deep) !important;
   cursor: pointer;
   font-size: 1.25em;
   font-weight: 900;
@@ -791,7 +910,7 @@ button.button:not(.primary) {
 
 .faq-item summary::after {
   content: "+";
-  color: #e375ac;
+  color: var(--swc-pink-deep);
   font-size: 1.4em;
   font-weight: 900;
   grid-column: 1;
@@ -1002,7 +1121,7 @@ section#expect.main.special {
 
 .fragment-card-number {
   display: block;
-  color: #8b62a2;
+  color: var(--swc-plum-soft);
   font-weight: 700;
   font-size: 0.85em;
   letter-spacing: 0.03em;
@@ -1024,7 +1143,7 @@ section#expect.main.special {
 }
 
 .fragment-card .read-more {
-  color: #e375ac;
+  color: var(--swc-pink-deep);
   font-weight: 800;
   border-bottom: none;
 }
@@ -1038,7 +1157,7 @@ section#expect.main.special {
 
 .fragment-post-number {
   display: block;
-  color: #8b62a2;
+  color: var(--swc-plum-soft);
   font-weight: 700;
   font-size: 0.9em;
   letter-spacing: 0.03em;
@@ -1056,6 +1175,6 @@ section#expect.main.special {
   display: inline-block;
   margin-top: 1em;
   font-weight: 800;
-  color: #e375ac;
+  color: var(--swc-pink-deep);
   border-bottom: none;
 }

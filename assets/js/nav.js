@@ -12,7 +12,7 @@
 
   const heroHeader = `
     <header id="header" class="alt">
-      <span class="logo"><a href="/"><img src="/images/swc2.svg" alt="Sapphic Writers Circle logo" /></a></span>
+      <span class="logo"><a href="/"><img src="/images/brand/swc-badge-360.webp" srcset="/images/brand/swc-badge-360.webp 360w, /images/brand/swc-badge-720.webp 720w" sizes="(max-width: 736px) 220px, 320px" width="360" height="371" alt="Sapphic Writers Circle logo" /></a></span>
       <h1>Sapphic Writers Circle</h1>
       <p>Community &amp; creative support for sapphic writers in Austin, TX</p>
       <ul class="actions special">
@@ -24,12 +24,13 @@
 
   const slimHeader = `
     <header id="header" class="alt slim">
-      <span class="logo"><a href="/"><img src="/images/swc2.svg" alt="Sapphic Writers Circle logo" /></a></span>
+      <span class="logo"><a href="/"><img src="/images/brand/swc-badge-360.webp" srcset="/images/brand/swc-badge-360.webp 360w, /images/brand/swc-badge-720.webp 720w" sizes="(max-width: 736px) 150px, 180px" width="360" height="371" alt="Sapphic Writers Circle logo" /></a></span>
     </header>
   `;
 
   const navHTML = `
     <nav id="nav">
+      <a href="/" class="nav-mark" aria-label="Sapphic Writers Circle home"><img src="/images/brand/swc-flower-96.webp" width="48" height="48" alt="" /></a>
       <ul>
         ${navItems
           .map(

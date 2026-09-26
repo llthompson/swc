@@ -965,3 +965,97 @@ section#expect.main.special {
   padding-top: 24px;
   padding-bottom: 0;
 }
+
+/* Fragments journal */
+
+#fragments header.major {
+  text-align: center;
+}
+
+.fragments-intro {
+  max-width: 38em;
+  margin: 0 auto;
+}
+
+.fragments-list {
+  display: grid;
+  gap: 1.5em;
+  max-width: 38em;
+  margin: 2em auto 0;
+  text-align: left;
+}
+
+.fragment-card {
+  border: 3px solid #ffe49c;
+  border-radius: 1em;
+  padding: 1.25em 1.5em;
+  background: #fffdf7;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.fragment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5em 0 rgba(125, 69, 199, 0.12);
+}
+
+.fragment-card-number {
+  display: block;
+  color: #8b62a2;
+  font-weight: 700;
+  font-size: 0.85em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 0.35em;
+}
+
+.fragment-card h2 {
+  margin-bottom: 0.35em !important;
+}
+
+.fragment-card h2 a {
+  color: #7d45c7;
+  border-bottom: none;
+}
+
+.fragment-card p {
+  margin-bottom: 0.75em;
+}
+
+.fragment-card .read-more {
+  color: #e375ac;
+  font-weight: 800;
+  border-bottom: none;
+}
+
+/* Individual fragment post */
+
+.fragment-post header.major {
+  text-align: center;
+  margin-bottom: 1.5em !important;
+}
+
+.fragment-post-number {
+  display: block;
+  color: #8b62a2;
+  font-weight: 700;
+  font-size: 0.9em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 0.5em;
+}
+
+.fragment-post-body {
+  max-width: 38em;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.fragment-post-back {
+  display: inline-block;
+  margin-top: 1em;
+  font-weight: 800;
+  color: #e375ac;
+  border-bottom: none;
+}

@@ -1178,3 +1178,10 @@ section#expect.main.special {
   color: var(--swc-pink-deep);
   border-bottom: none;
 }
+
+/* Book fair */
+
+.fair-intro {
+  max-width: 42em;
+  margin: 2em auto;
+}

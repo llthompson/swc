@@ -5,7 +5,7 @@
     { page: "about", href: "/", label: "About" },
     { page: "expect", href: "/expect/", label: "Meetings" },
     { page: "meetings", href: "/meetings/", label: "When & Where" },
-    { page: "sapphic-scholastic", href: "/sapphic-scholastic/", label: "Sapphic Scholastic" },
+    { page: "sapphic-scholastic", href: "/sapphic-scholastic/", label: "sapphic scholastic" },
     { page: "fragments", href: "/fragments/", label: "Fragments" },
     { page: "join", href: "/join/", label: "Socials" },
     { page: "faq", href: "/faq/", label: "FAQ" },
